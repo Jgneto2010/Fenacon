@@ -1,0 +1,6 @@
+D:\Projetos-João Garcia\Fenacon\Fenacon\Infra\bin\Debug\netcoreapp3.1\Infra.deps.json
+D:\Projetos-João Garcia\Fenacon\Fenacon\Infra\bin\Debug\netcoreapp3.1\Infra.dll
+D:\Projetos-João Garcia\Fenacon\Fenacon\Infra\obj\Debug\netcoreapp3.1\Infra.AssemblyInfoInputs.cache
+D:\Projetos-João Garcia\Fenacon\Fenacon\Infra\obj\Debug\netcoreapp3.1\Infra.AssemblyInfo.cs
+D:\Projetos-João Garcia\Fenacon\Fenacon\Infra\bin\Debug\netcoreapp3.1\Domain.dll
+D:\Projetos-João Garcia\Fenacon\Fenacon\Infra\obj\Debug\netcoreapp3.1\Infra.csprojAssemblyReference.cache
