@@ -116,21 +116,17 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jgnet\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\jgnet\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projetos-João Garcia\\Projeto Fenacon\\Fenacon\\Domain\\Domain.csproj",
+      "projectUniqueName": "D:\\Projetos-João Garcia\\Fenacon\\Fenacon\\Fenacon\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "D:\\Projetos-João Garcia\\Projeto Fenacon\\Fenacon\\Domain\\Domain.csproj",
+      "projectPath": "D:\\Projetos-João Garcia\\Fenacon\\Fenacon\\Fenacon\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\jgnet\\.nuget\\packages\\",
-      "outputPath": "D:\\Projetos-João Garcia\\Projeto Fenacon\\Fenacon\\Domain\\obj\\",
+      "outputPath": "D:\\Projetos-João Garcia\\Fenacon\\Fenacon\\Fenacon\\Domain\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
         "C:\\Users\\jgnet\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -183,7 +179,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

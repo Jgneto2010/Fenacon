@@ -21,7 +21,7 @@ namespace Domain.User
         public Office Office { get; set; }
         public DateTime workload { get; set; }
         public DateTime AdmissionDate { get; set; }
-        public bool Supervisor { get; set; }
+        public Supervisor? Supervisor { get; set; }
         public Situation Situation { get; set; }
 
 

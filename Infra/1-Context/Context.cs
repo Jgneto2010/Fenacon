@@ -13,12 +13,16 @@ namespace Infra._1_Context
         public Context(DbContextOptions<Context> options) : base(options) { }
         public DbSet<Employee> Employee { get; set; }
         public DbSet<User> User { get; set; }
+        public DbSet<Manager> Manager { get; set; }
+        public DbSet<Supervisor> Supervisor { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new EmployeeMapping());
             modelBuilder.ApplyConfiguration(new UserMapping());
+            modelBuilder.ApplyConfiguration(new ManagerMapping());
+            modelBuilder.ApplyConfiguration(new SupervisorMapping());
             base.OnModelCreating(modelBuilder);
             
         }
@@ -26,7 +30,6 @@ namespace Infra._1_Context
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            // optionsBuilder.UseSqlServer("Server=localhost,1433; Database = BancoTesteDockerS; User ID = sa; Password = MadreTeresa387122;");
         }
     }
 }

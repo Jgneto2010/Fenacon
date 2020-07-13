@@ -25,18 +25,18 @@ namespace Infra._1_Mapping
 
             builder.Property(e => e.Login)
                   .HasColumnName("Login")
-                  .HasColumnType("varchar")
+                  .HasColumnType("varchar(40)")
                   .IsRequired();
 
             builder.Property(e => e.Password)
                   .HasColumnName("Password")
-                   .HasColumnType("varchar")
+                   .HasColumnType("varchar(40)")
                    .IsRequired();
 
 
             builder.Property(e => e.ConfirmPassword)
                    .HasColumnName("ConfirmPassword")
-                   .HasColumnType("varchar")
+                   .HasColumnType("varchar(40)")
                    .IsRequired();
 
             

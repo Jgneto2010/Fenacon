@@ -46,16 +46,13 @@ namespace Infra._1_Mappimg
                    .HasColumnType("datetime")
                    .IsRequired();
 
-            builder.Property(e => e.Supervisor)
-                  .HasColumnName("Supervisor")
-                  .HasColumnType("int")
-                  .IsRequired();
-
             builder.Property(e => e.Situation)
                    .HasColumnName("Situation")
                    .HasColumnType("Int")
                    .IsRequired();
-            
+
+            builder.HasOne(c => c.Supervisor);
+
         }
        
     }

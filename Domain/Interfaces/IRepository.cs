@@ -3,10 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Infra._1_IRepository
+namespace Domain.Interfaces
 {
-    public interface IRepositorio<T>
-       where T : Entity
+    public interface IRepository<T>
+      where T : Entity
     {
         void Add(T obj);
         T GetById(Guid id);
