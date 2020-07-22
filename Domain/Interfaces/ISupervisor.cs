@@ -1,11 +1,11 @@
-﻿using Domain.User;
+﻿using Domain.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Domain.Interfaces
 {
-    public interface ISupervisor : IRepository<Supervisor>
+    public interface ISupervisor : IRepositorio<Supervisor>
     {
     }
 }
