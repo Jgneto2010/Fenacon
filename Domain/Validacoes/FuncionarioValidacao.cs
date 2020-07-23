@@ -19,7 +19,7 @@ namespace Domain.Validacoes
 
             RuleFor(c => c.Endereco).NotEmpty().WithMessage("O Endereço não pode ser vazio")
                                 .MaximumLength(214)
-                                 .MinimumLength(10).WithMessage("Formato Endereço incorreto");
+                                 .MinimumLength(1).WithMessage("Formato Endereço incorreto");
 
         }
     }

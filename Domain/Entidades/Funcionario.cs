@@ -13,7 +13,7 @@ namespace Domain.Entidades
             Cpf = cpf;
             Endereco = endereco;
             DataAdmissao = dataAdmissao;
-            Id = Guid.NewGuid();
+           
         }
         public string Nome { get; set; }
         public string Cpf { get; set; }
