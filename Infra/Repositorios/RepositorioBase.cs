@@ -30,5 +30,11 @@ namespace Infra.Repositorios
         {
             return _contexto.SaveChanges();
         }
+
+        public List<T> GetAll()
+        {
+            return DbSet.ToList();
+        }
+
     }
 }

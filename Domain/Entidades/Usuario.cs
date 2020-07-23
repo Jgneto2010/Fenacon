@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -35,10 +36,10 @@ namespace Domain.Entidades
             this.ConfirmPassword = confirmPassword;
         }
 
-        public static string Encrypt(string text)
+        public void Encrypt()
         {
             MD5 md5 = new MD5CryptoServiceProvider();
-            md5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(text));
+            md5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(this.Password));
             byte[] result = md5.Hash;
             StringBuilder strBuilder = new StringBuilder();
             for (int i = 0; i < result.Length; i++)
@@ -46,7 +47,7 @@ namespace Domain.Entidades
                 strBuilder.Append(result[i].ToString("x2"));
             }
 
-            return strBuilder.ToString();
+            this.Password = strBuilder.ToString();
         }
     }
 }

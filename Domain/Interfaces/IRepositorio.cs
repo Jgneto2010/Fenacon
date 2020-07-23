@@ -11,6 +11,7 @@ namespace Domain.Interfaces
     {
         void Add(T obj);
         int SaveChanges();
+        List<T> GetAll();
 
     }
    

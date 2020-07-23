@@ -21,9 +21,9 @@ namespace Domain.Validacoes
                                 .MaximumLength(214)
                                  .MinimumLength(2).WithMessage("Formato Password incorreto");
             
-            RuleFor(c => c.ConfirmPassword).Equal(c => c.Password).WithMessage("As senhas não conferem")
-                                .MaximumLength(214)
-                                 .MinimumLength(2).WithMessage("Formato Password incorreto");
+            //RuleFor(c => c.ConfirmPassword).Equal(c => c.Password).WithMessage("As senhas não conferem")
+            //                    .MaximumLength(214)
+            //                     .MinimumLength(2).WithMessage("Formato Password incorreto");
 
         }
     }

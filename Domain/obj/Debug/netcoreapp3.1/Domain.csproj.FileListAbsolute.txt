@@ -6,3 +6,20 @@ C:\Users\jgnet\source\repos\FenaconCriation\Domain\bin\Debug\netcoreapp3.1\Domai
 C:\Users\jgnet\source\repos\FenaconCriation\Domain\bin\Debug\netcoreapp3.1\Domain.pdb
 C:\Users\jgnet\source\repos\FenaconCriation\Domain\obj\Debug\netcoreapp3.1\Domain.dll
 C:\Users\jgnet\source\repos\FenaconCriation\Domain\obj\Debug\netcoreapp3.1\Domain.pdb
+C:\teste\Domain\bin\Debug\netcoreapp3.1\Domain.deps.json
+C:\teste\Domain\bin\Debug\netcoreapp3.1\Domain.dll
+C:\teste\Domain\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\teste\Domain\obj\Debug\netcoreapp3.1\Domain.csprojAssemblyReference.cache
+C:\teste\Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfoInputs.cache
+C:\teste\Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfo.cs
+C:\teste\Domain\obj\Debug\netcoreapp3.1\Domain.csproj.CoreCompileInputs.cache
+C:\teste\Domain\obj\Debug\netcoreapp3.1\Domain.dll
+C:\teste\Domain\obj\Debug\netcoreapp3.1\Domain.pdb
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Domain\bin\Debug\netcoreapp3.1\Domain.deps.json
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Domain\bin\Debug\netcoreapp3.1\Domain.dll
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Domain\bin\Debug\netcoreapp3.1\Domain.pdb
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfoInputs.cache
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfo.cs
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Domain\obj\Debug\netcoreapp3.1\Domain.csproj.CoreCompileInputs.cache
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Domain\obj\Debug\netcoreapp3.1\Domain.dll
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Domain\obj\Debug\netcoreapp3.1\Domain.pdb

@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Domain.Entidades;
+﻿using Domain.Entidades;
 using Domain.Interfaces;
 using Domain.Modelos;
 using Domain.Validacoes;
-using Infra.Repositorios;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace FenaconCriation.Controllers
 {
@@ -20,6 +17,11 @@ namespace FenaconCriation.Controllers
         [Route("cadastrarUsuario")]
         public IActionResult CadastrarUsuario([FromServices] IUsuario repositorio, [FromBody] UsuarioModel addUsuario)
         {
+            if (addUsuario.Password != addUsuario.ConfirmPassword)
+            {
+                return NotFound();
+            }
+            
             var usuario = new Usuario
             {
                 Name = addUsuario.Name,
@@ -30,6 +32,7 @@ namespace FenaconCriation.Controllers
             };
 
             var validacao = new UsuarioValidacao().Validate(usuario);
+            usuario.Encrypt();
 
             if (validacao.IsValid)
             {
@@ -43,5 +46,26 @@ namespace FenaconCriation.Controllers
            
         }
        
+        [HttpGet]
+        [Route("listaUsuario")]
+        public async Task<IActionResult> GetUsuarioLista([FromServices] IUsuario repositorio)
+        {
+            var listaUsuario = repositorio.GetAll().ToList();
+            var quantidade = listaUsuario.Count();
+
+            var novaLista = listaUsuario.Select(x => new UsuarioListaModel
+            {
+                Name = x.Name
+            });
+
+            return Ok(new
+            {
+                quantidasde = quantidade,
+                lista = novaLista
+            });
+        }
+
     }
+
+   
 }

@@ -13,3 +13,33 @@ C:\Users\jgnet\source\repos\FenaconCriation\Infra\obj\Debug\netcoreapp3.1\Infra.
 C:\Users\jgnet\source\repos\FenaconCriation\Infra\obj\Debug\netcoreapp3.1\Infra.dll
 C:\Users\jgnet\source\repos\FenaconCriation\Infra\obj\Debug\netcoreapp3.1\Infra.pdb
 C:\Users\jgnet\source\repos\FenaconCriation\Infra\obj\Debug\netcoreapp3.1\Infra.genruntimeconfig.cache
+C:\teste\Infra\bin\Debug\netcoreapp3.1\Infra.deps.json
+C:\teste\Infra\bin\Debug\netcoreapp3.1\Infra.runtimeconfig.json
+C:\teste\Infra\bin\Debug\netcoreapp3.1\Infra.runtimeconfig.dev.json
+C:\teste\Infra\bin\Debug\netcoreapp3.1\Infra.dll
+C:\teste\Infra\bin\Debug\netcoreapp3.1\Infra.pdb
+C:\teste\Infra\bin\Debug\netcoreapp3.1\Domain.dll
+C:\teste\Infra\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\teste\Infra\obj\Debug\netcoreapp3.1\Infra.csprojAssemblyReference.cache
+C:\teste\Infra\obj\Debug\netcoreapp3.1\Infra.AssemblyInfoInputs.cache
+C:\teste\Infra\obj\Debug\netcoreapp3.1\Infra.AssemblyInfo.cs
+C:\teste\Infra\obj\Debug\netcoreapp3.1\Infra.csproj.CoreCompileInputs.cache
+C:\teste\Infra\obj\Debug\netcoreapp3.1\Infra.csproj.CopyComplete
+C:\teste\Infra\obj\Debug\netcoreapp3.1\Infra.dll
+C:\teste\Infra\obj\Debug\netcoreapp3.1\Infra.pdb
+C:\teste\Infra\obj\Debug\netcoreapp3.1\Infra.genruntimeconfig.cache
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Infra\bin\Debug\netcoreapp3.1\Infra.deps.json
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Infra\bin\Debug\netcoreapp3.1\Infra.runtimeconfig.json
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Infra\bin\Debug\netcoreapp3.1\Infra.runtimeconfig.dev.json
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Infra\bin\Debug\netcoreapp3.1\Infra.dll
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Infra\bin\Debug\netcoreapp3.1\Infra.pdb
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Infra\bin\Debug\netcoreapp3.1\Domain.dll
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Infra\bin\Debug\netcoreapp3.1\Domain.pdb
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Infra\obj\Debug\netcoreapp3.1\Infra.csprojAssemblyReference.cache
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Infra\obj\Debug\netcoreapp3.1\Infra.AssemblyInfoInputs.cache
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Infra\obj\Debug\netcoreapp3.1\Infra.AssemblyInfo.cs
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Infra\obj\Debug\netcoreapp3.1\Infra.csproj.CoreCompileInputs.cache
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Infra\obj\Debug\netcoreapp3.1\Infra.csproj.CopyComplete
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Infra\obj\Debug\netcoreapp3.1\Infra.dll
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Infra\obj\Debug\netcoreapp3.1\Infra.pdb
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Infra\obj\Debug\netcoreapp3.1\Infra.genruntimeconfig.cache
