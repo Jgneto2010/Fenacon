@@ -16,7 +16,7 @@ namespace FenaconCriation.Controllers
     public class FuncionarioController : ControllerBase
     {
         [HttpPost]
-        [Route("cadastrarUsuario")]
+        [Route("cadastrarFuncionario")]
         public IActionResult CadastrarFuncionario([FromServices] IFuncionarios repositorio, [FromBody] FuncionarioModel addFuncionario)
         {
 
@@ -48,6 +48,31 @@ namespace FenaconCriation.Controllers
 
 
         }
-       
+
+        [HttpGet]
+        [Route("listaFuncionario")]
+        public async Task<IActionResult> GetFuncionarioLista([FromServices] IFuncionarios repositorio)
+        {
+            var listaUsuario = repositorio.GetAllFunc().ToList();
+
+            var quantidade = listaUsuario.Count();
+
+            var novaLista = listaUsuario.Select(x => new FuncionarioListaModel
+            {
+                Nome = x.Nome,
+                Cargo = Enum.Parse(typeof(Cargo), x.Cargo.ToString()).ToString(),
+                Cpf = x.Cpf,
+                Endereco = x.Endereco,
+                Situacao =  Enum.Parse(typeof(Situacao), x.Situacao.ToString()).ToString(),
+                Supervisor = x.Supervisor,
+            });
+
+            return Ok(new
+            {
+                quantidasde = quantidade,
+                lista = novaLista
+            });
+        }
+
     }
 }

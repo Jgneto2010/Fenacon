@@ -23,3 +23,4 @@ D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Domain\obj\Debug\netcoreapp3.1\
 D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Domain\obj\Debug\netcoreapp3.1\Domain.csproj.CoreCompileInputs.cache
 D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Domain\obj\Debug\netcoreapp3.1\Domain.dll
 D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Domain\obj\Debug\netcoreapp3.1\Domain.pdb
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\Domain\obj\Debug\netcoreapp3.1\Domain.csprojAssemblyReference.cache

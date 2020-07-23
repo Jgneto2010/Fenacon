@@ -130,6 +130,12 @@ C:\teste\FenaconCriation\obj\Debug\netcoreapp3.1\staticwebassets\FenaconCriation
 C:\teste\FenaconCriation\obj\Debug\netcoreapp3.1\FenaconCriation.dll
 C:\teste\FenaconCriation\obj\Debug\netcoreapp3.1\FenaconCriation.pdb
 C:\teste\FenaconCriation\obj\Debug\netcoreapp3.1\FenaconCriation.genruntimeconfig.cache
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\FenaconCriation\obj\Debug\netcoreapp3.1\FenaconCriation.csprojAssemblyReference.cache
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\FenaconCriation\obj\Debug\netcoreapp3.1\FenaconCriation.AssemblyInfoInputs.cache
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\FenaconCriation\obj\Debug\netcoreapp3.1\FenaconCriation.AssemblyInfo.cs
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\FenaconCriation\obj\Debug\netcoreapp3.1\FenaconCriation.csproj.CoreCompileInputs.cache
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\FenaconCriation\obj\Debug\netcoreapp3.1\FenaconCriation.MvcApplicationPartsAssemblyInfo.cs
+D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\FenaconCriation\obj\Debug\netcoreapp3.1\FenaconCriation.MvcApplicationPartsAssemblyInfo.cache
 D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\FenaconCriation\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\FenaconCriation\bin\Debug\netcoreapp3.1\appsettings.json
 D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\FenaconCriation\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -183,12 +189,6 @@ D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\FenaconCriation\bin\Debug\netco
 D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\FenaconCriation\bin\Debug\netcoreapp3.1\Infra.dll
 D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\FenaconCriation\bin\Debug\netcoreapp3.1\Infra.pdb
 D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\FenaconCriation\bin\Debug\netcoreapp3.1\Domain.pdb
-D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\FenaconCriation\obj\Debug\netcoreapp3.1\FenaconCriation.csprojAssemblyReference.cache
-D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\FenaconCriation\obj\Debug\netcoreapp3.1\FenaconCriation.AssemblyInfoInputs.cache
-D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\FenaconCriation\obj\Debug\netcoreapp3.1\FenaconCriation.AssemblyInfo.cs
-D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\FenaconCriation\obj\Debug\netcoreapp3.1\FenaconCriation.csproj.CoreCompileInputs.cache
-D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\FenaconCriation\obj\Debug\netcoreapp3.1\FenaconCriation.MvcApplicationPartsAssemblyInfo.cs
-D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\FenaconCriation\obj\Debug\netcoreapp3.1\FenaconCriation.MvcApplicationPartsAssemblyInfo.cache
 D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\FenaconCriation\obj\Debug\netcoreapp3.1\FenaconCriation.RazorTargetAssemblyInfo.cache
 D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\FenaconCriation\obj\Debug\netcoreapp3.1\FenaconCriation.csproj.CopyComplete
 D:\Projetos-João Garcia\Projeto Fenacon\Fenacon\FenaconCriation\obj\Debug\netcoreapp3.1\staticwebassets\FenaconCriation.StaticWebAssets.Manifest.cache

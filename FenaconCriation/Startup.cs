@@ -26,6 +26,7 @@ namespace FenaconCriation
         {
             services.AddScoped<IUsuario, UsuarioRepositorio>();
             services.AddScoped<IFuncionarios, FuncionarioRepositorio>();
+            services.AddScoped<ISupervisor, SupervisorRepositorio>();
 
 
             services.AddDbContext<Contexto>(options =>

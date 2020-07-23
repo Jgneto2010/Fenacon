@@ -36,5 +36,9 @@ namespace Infra.Repositorios
             return DbSet.ToList();
         }
 
+        public List<T> GetAllFunc()
+        {
+            return DbSet.ToList();
+        }
     }
 }
