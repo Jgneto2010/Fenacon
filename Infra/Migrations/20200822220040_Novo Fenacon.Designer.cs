@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infra.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20200713175935_fen")]
-    partial class fen
+    [Migration("20200822220040_Novo Fenacon")]
+    partial class NovoFenacon
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -49,6 +49,13 @@ namespace Infra.Migrations
                         .HasColumnName("Address")
                         .HasColumnType("varchar(80)");
 
+                    b.Property<bool>("FeriasVencida")
+                        .HasColumnName("FeriasVencidas")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("IdSupervisor")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnName("Name_User")
@@ -58,12 +65,9 @@ namespace Infra.Migrations
                         .HasColumnName("Situation")
                         .HasColumnType("Int");
 
-                    b.Property<Guid?>("SupervisorId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("SupervisorId");
+                    b.HasIndex("IdSupervisor");
 
                     b.ToTable("Funcionarios");
                 });
@@ -135,8 +139,10 @@ namespace Infra.Migrations
             modelBuilder.Entity("Domain.Entidades.Funcionario", b =>
                 {
                     b.HasOne("Domain.Entidades.Supervisor", "Supervisor")
-                        .WithMany()
-                        .HasForeignKey("SupervisorId");
+                        .WithMany("Funcionarios")
+                        .HasForeignKey("IdSupervisor")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

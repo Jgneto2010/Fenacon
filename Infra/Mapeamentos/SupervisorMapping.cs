@@ -20,6 +20,10 @@ namespace Infra.Mapeamentos
                    .HasColumnName("Name")
                    .HasColumnType("varchar(40)")
                    .IsRequired();
+
+
+            builder.HasMany(x => x.Funcionarios);
+                   
         }
     }
 }

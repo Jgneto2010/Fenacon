@@ -5277,11 +5277,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projetos-João Garcia\\Projeto Fenacon\\Fenacon\\FenaconCriation\\FenaconCriation.csproj",
+      "projectUniqueName": "D:\\Projetos-João Garcia\\Projeto Fenacon\\Fenacon\\Fenacon\\FenaconCriation\\FenaconCriation.csproj",
       "projectName": "FenaconCriation",
-      "projectPath": "D:\\Projetos-João Garcia\\Projeto Fenacon\\Fenacon\\FenaconCriation\\FenaconCriation.csproj",
+      "projectPath": "D:\\Projetos-João Garcia\\Projeto Fenacon\\Fenacon\\Fenacon\\FenaconCriation\\FenaconCriation.csproj",
       "packagesPath": "C:\\Users\\jgnet\\.nuget\\packages\\",
-      "outputPath": "D:\\Projetos-João Garcia\\Projeto Fenacon\\Fenacon\\FenaconCriation\\obj\\",
+      "outputPath": "D:\\Projetos-João Garcia\\Projeto Fenacon\\Fenacon\\Fenacon\\FenaconCriation\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jgnet\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5297,8 +5297,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\Projetos-João Garcia\\Projeto Fenacon\\Fenacon\\Infra\\Infra.csproj": {
-              "projectPath": "D:\\Projetos-João Garcia\\Projeto Fenacon\\Fenacon\\Infra\\Infra.csproj"
+            "D:\\Projetos-João Garcia\\Projeto Fenacon\\Fenacon\\Fenacon\\Infra\\Infra.csproj": {
+              "projectPath": "D:\\Projetos-João Garcia\\Projeto Fenacon\\Fenacon\\Fenacon\\Infra\\Infra.csproj"
             }
           }
         }

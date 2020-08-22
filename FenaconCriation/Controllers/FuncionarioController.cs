@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using Domain.Entidades;
 using Domain.Interfaces;
@@ -19,8 +20,6 @@ namespace FenaconCriation.Controllers
         [Route("cadastrarFuncionario")]
         public IActionResult CadastrarFuncionario([FromServices] IFuncionarios repositorio, [FromBody] FuncionarioModel addFuncionario)
         {
-
-
             var funcionario = new Funcionario
             {
                 Nome = addFuncionario.Nome,
@@ -29,13 +28,14 @@ namespace FenaconCriation.Controllers
                 Cargo = addFuncionario.Cargo,
                 CargaHoraria = addFuncionario.CargaHoraria,
                 DataAdmissao = addFuncionario.DataAdmissao,
-                Supervisor = addFuncionario.Supervisor,
-                Situacao = addFuncionario.Situacao
+                FeriasVencida = addFuncionario.FeriasVencida,
+                Situacao = addFuncionario.Situacao,
+                IdSupervisor = addFuncionario.IdSupervisor
                 
             };
-
+            
+            funcionario.FeriasVencida = funcionario.ValidarFerias(funcionario.DataAdmissao);
             var validacao = new FuncionarioValidacao().Validate(funcionario);
-           
 
             if (validacao.IsValid)
             {
@@ -45,7 +45,6 @@ namespace FenaconCriation.Controllers
             }
 
             return Ok(validacao.Errors);
-
 
         }
 
@@ -64,7 +63,10 @@ namespace FenaconCriation.Controllers
                 Cpf = x.Cpf,
                 Endereco = x.Endereco,
                 Situacao =  Enum.Parse(typeof(Situacao), x.Situacao.ToString()).ToString(),
-                Supervisor = x.Supervisor,
+                Supervisor = new SupervisorListaModel
+                {
+                    Nome = x.Supervisor.Nome
+                }
             });
 
             return Ok(new

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -15,28 +16,32 @@ namespace Domain.Entidades
             DataAdmissao = dataAdmissao;
            
         }
+        public Guid Id { get; set; }
         public string Nome { get; set; }
         public string Cpf { get; set; }
         public string Endereco { get; set; }
         public Cargo Cargo { get; set; }
         public DateTime CargaHoraria { get; set; }
         public DateTime DataAdmissao { get; set; }
-        public Supervisor? Supervisor { get; set; }
+        public bool FeriasVencida { get; set; }
+        public virtual Supervisor Supervisor { get; set; }
+        public Guid IdSupervisor { get; set; }
         public Situacao Situacao { get; set; }
 
-        public bool ValidaDiasTrabalhados(DateTime dataAdmissao)
+        
+        
+        
+        public bool ValidarFerias(DateTime dataAdmissao)
         {
-            var dateSolicitation = DateTime.Now;
+            var dataAtual = DateTime.Now.Subtract(dataAdmissao);
 
-
-            if (dataAdmissao.Month > 12)
+            if (dataAtual.Days > 547)
             {
                 return true;
             }
-            else
-            {
-                return false;
-            }
+
+            return false;
+
         }
     }
 }

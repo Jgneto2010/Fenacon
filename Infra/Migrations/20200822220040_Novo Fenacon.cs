@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Infra.Migrations
 {
-    public partial class fen : Migration
+    public partial class NovoFenacon : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -57,24 +57,25 @@ namespace Infra.Migrations
                     Office = table.Column<int>(type: "Int", nullable: false),
                     workload = table.Column<DateTime>(type: "datetime", nullable: false),
                     AdmissionDate = table.Column<DateTime>(type: "datetime", nullable: false),
-                    SupervisorId = table.Column<Guid>(nullable: true),
+                    FeriasVencidas = table.Column<bool>(type: "bit", nullable: false),
+                    IdSupervisor = table.Column<Guid>(nullable: false),
                     Situation = table.Column<int>(type: "Int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Funcionarios", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Funcionarios_Supervisor_SupervisorId",
-                        column: x => x.SupervisorId,
+                        name: "FK_Funcionarios_Supervisor_IdSupervisor",
+                        column: x => x.IdSupervisor,
                         principalTable: "Supervisor",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Funcionarios_SupervisorId",
+                name: "IX_Funcionarios_IdSupervisor",
                 table: "Funcionarios",
-                column: "SupervisorId");
+                column: "IdSupervisor");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

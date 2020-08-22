@@ -4,6 +4,7 @@ using Infra.Contextos;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Infra.Repositorios
@@ -17,9 +18,9 @@ namespace Infra.Repositorios
             _contexto = contexto;
             DbSet = _contexto.Set<Supervisor>();
         }
-        //public List<Funcionario> GetAllFunc()
-        //{
-        //    //return DbSet.AsNoTracking().Include(x => x.Supervisor).ToList();
-        //}
+        public List<Supervisor> GetAllFunc()
+        {
+            return DbSet.AsNoTracking().Include(x => x.Funcionarios).ToList();
+        }
     }
 }

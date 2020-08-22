@@ -8,5 +8,6 @@ namespace Domain.Entidades
     {
         public Supervisor(){}
         public string Nome { get; set; }
+        public IEnumerable<Funcionario> Funcionarios { get; set; }
     }
 }

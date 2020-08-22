@@ -11,9 +11,9 @@ namespace FenaconCriation.Controllers
     public class LoginController : ControllerBase
     {
         [AllowAnonymous]
-        [HttpGet]
+        [HttpPost]
         [Route("loginUsuario")]
-        public async Task<IActionResult> GetUsuarioById([FromServices] IUsuario repositorio, [FromQuery] LoginModel loginModel)
+        public async Task<IActionResult> GetUsuarioById([FromServices] IUsuario repositorio, [FromBody] LoginModel loginModel)
         {
             var result =  repositorio.ObterUsuarioPeloNome(loginModel.Login, loginModel.Senha);
 

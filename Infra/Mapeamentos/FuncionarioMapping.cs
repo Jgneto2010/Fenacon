@@ -34,6 +34,11 @@ namespace Infra.Mapeamentos
                   .HasColumnName("Office")
                    .HasColumnType("Int")
                    .IsRequired();
+            
+            builder.Property(e => e.FeriasVencida)
+                 .HasColumnName("FeriasVencidas")
+                  .HasColumnType("bit");
+                  
 
             builder.Property(e => e.CargaHoraria)
                    .HasColumnName("workload")
@@ -50,7 +55,12 @@ namespace Infra.Mapeamentos
                    .HasColumnType("Int")
                    .IsRequired();
 
-            builder.HasOne(c => c.Supervisor);
+            builder.HasOne(c => c.Supervisor)
+                   .WithMany(c => c.Funcionarios)
+                   .HasForeignKey(c => c.IdSupervisor);
+                   
+                 
+                
         }
     }
 }

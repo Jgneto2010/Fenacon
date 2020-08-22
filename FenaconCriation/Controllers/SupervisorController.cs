@@ -21,7 +21,7 @@ namespace FenaconCriation.Controllers
 
             var supervisor = new Supervisor
             {
-                Nome = addsupervisor.Nome
+               Nome = addsupervisor.Nome
 
             };
 
@@ -29,6 +29,27 @@ namespace FenaconCriation.Controllers
             repositorio.SaveChanges();
             return Ok(supervisor);
 
+        }
+
+        [HttpGet]
+        [Route("listaSupervisores")]
+        public async Task<IActionResult> GetSupervisorLista([FromServices] ISupervisor repositorio)
+        {
+            var listaSupervisor = repositorio.GetAllFunc().ToList();
+
+            var quantidade = listaSupervisor.Count();
+
+            var novaLista = listaSupervisor.Select(x => new SupervisorListaModel
+            {
+                Nome = x.Nome,
+               
+            });
+
+            return Ok(new
+            {
+                quantidasde = quantidade,
+                lista = novaLista
+            });
         }
     }
 }

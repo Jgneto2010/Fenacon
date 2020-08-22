@@ -4,9 +4,8 @@ using System.Text;
 
 namespace Domain.Modelos
 {
-    public class SupervisorModel
+    public class SupervisorListaModel
     {
         public string Nome { get; set; }
-
     }
 }
