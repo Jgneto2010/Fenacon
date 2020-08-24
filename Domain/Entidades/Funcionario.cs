@@ -27,8 +27,6 @@ namespace Domain.Entidades
         public virtual Supervisor Supervisor { get; set; }
         public Guid IdSupervisor { get; set; }
         public Situacao Situacao { get; set; }
-
-        
         
         
         public bool ValidarFerias(DateTime dataAdmissao)

@@ -11,6 +11,7 @@ namespace Domain.Modelos
         public string Cpf { get; set; }
         public string Endereco { get; set; }
         public String Cargo { get; set; }
+        public bool FeriasVencidas { get; set; }
         public SupervisorListaModel Supervisor { get; set; }
         public string Situacao { get; set; }
     }

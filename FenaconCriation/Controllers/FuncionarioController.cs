@@ -16,10 +16,22 @@ namespace FenaconCriation.Controllers
     [ApiController]
     public class FuncionarioController : ControllerBase
     {
+
+
+        private readonly IFuncionarios _funcRepository;
+
+        public FuncionarioController(IFuncionarios funcRepository)
+        {
+            
+            _funcRepository = funcRepository;
+        }
+
         [HttpPost]
         [Route("cadastrarFuncionario")]
         public IActionResult CadastrarFuncionario([FromServices] IFuncionarios repositorio, [FromBody] FuncionarioModel addFuncionario)
         {
+
+            
             var funcionario = new Funcionario
             {
                 Nome = addFuncionario.Nome,
@@ -30,7 +42,7 @@ namespace FenaconCriation.Controllers
                 DataAdmissao = addFuncionario.DataAdmissao,
                 FeriasVencida = addFuncionario.FeriasVencida,
                 Situacao = addFuncionario.Situacao,
-                IdSupervisor = addFuncionario.IdSupervisor
+                IdSupervisor = addFuncionario.IdSupervisor,
                 
             };
             
@@ -52,17 +64,21 @@ namespace FenaconCriation.Controllers
         [Route("listaFuncionario")]
         public async Task<IActionResult> GetFuncionarioLista([FromServices] IFuncionarios repositorio)
         {
-            var listaUsuario = repositorio.GetAllFunc().ToList();
+            var listaFuncionarios = repositorio.GetAllFunc().ToList();
 
-            var quantidade = listaUsuario.Count();
+            if (listaFuncionarios == null)
+                return default;
 
-            var novaLista = listaUsuario.Select(x => new FuncionarioListaModel
+            var quantidade = listaFuncionarios.Count();
+
+            var novaLista = listaFuncionarios.Select(x => new FuncionarioListaModel
             {
                 Nome = x.Nome,
                 Cargo = Enum.Parse(typeof(Cargo), x.Cargo.ToString()).ToString(),
                 Cpf = x.Cpf,
                 Endereco = x.Endereco,
                 Situacao =  Enum.Parse(typeof(Situacao), x.Situacao.ToString()).ToString(),
+                FeriasVencidas = x.FeriasVencida,
                 Supervisor = new SupervisorListaModel
                 {
                     Nome = x.Supervisor.Nome
@@ -73,6 +89,56 @@ namespace FenaconCriation.Controllers
             {
                 quantidasde = quantidade,
                 lista = novaLista
+            });
+        }
+
+
+
+        [HttpGet]
+        [Route("listaFuncionarioEmFerias")]
+        public async Task<IActionResult> GetFuncionariosEmFerias([FromServices] IFuncionarios repositorio)
+        {
+            var listaFuncionarios = repositorio.GetAllFerias().ToList();
+
+            if (listaFuncionarios == null)
+                return default;
+
+            var quantidade = listaFuncionarios.Count();
+
+            var novaLista = listaFuncionarios.Select(x => new FuncionarioListaModel
+            {
+                Nome = x.Nome,
+                Cargo = Enum.Parse(typeof(Cargo), x.Cargo.ToString()).ToString(),
+                Cpf = x.Cpf,
+                Endereco = x.Endereco,
+                Situacao = Enum.Parse(typeof(Situacao), x.Situacao.ToString()).ToString(),
+                FeriasVencidas = x.FeriasVencida,
+                Supervisor = new SupervisorListaModel
+                {
+                    Nome = x.Supervisor.Nome
+                }
+            });
+
+            return Ok(new
+            {
+                quantidasde = quantidade,
+                lista = novaLista
+            });
+        }
+
+
+        [HttpGet]
+        [Route("FuncionarioId")]
+        public async Task<IActionResult> GetFuncionarioPorId(Guid id)
+        {
+            var funcionario = _funcRepository.GetById(id);
+
+            if (funcionario == null)
+                return default;
+
+            return Ok(new
+            {
+                lista = funcionario
             });
         }
 

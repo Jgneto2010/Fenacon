@@ -40,5 +40,16 @@ namespace Infra.Repositorios
         {
             return DbSet.ToList();
         }
+
+
+        T IRepositorio<T>.GetById(Guid id)
+        {
+            return DbSet.Where(x => x.Id == id).FirstOrDefault();
+        }
+
+        public List<T> GetAllFerias()
+        {
+            return DbSet.ToList();
+        }
     }
 }

@@ -13,6 +13,8 @@ namespace Domain.Interfaces
         int SaveChanges();
         List<T> GetAll();
         List<T> GetAllFunc();
+        List<T> GetAllFerias();
+        T GetById(Guid id);
 
     }
    

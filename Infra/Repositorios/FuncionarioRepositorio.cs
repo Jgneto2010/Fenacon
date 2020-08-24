@@ -21,7 +21,27 @@ namespace Infra.Repositorios
 
         public List<Funcionario> GetAllFunc()
         {
-            return DbSet.AsNoTracking().Include(x => x.Supervisor).ToList();
+            return DbSet.AsNoTracking()
+                .Include(x => x.Supervisor)
+                .OrderBy(x => x.DataAdmissao)
+                .ToList();
+        }
+
+        public List<Funcionario> GetAllFerias()
+        {
+            return DbSet.AsNoTracking()
+                 .Include(x => x.Supervisor)
+                 .OrderBy(x => x.DataAdmissao).Where(x => x.FeriasVencida == true)
+                 .ToList();
+        }
+
+
+        public Funcionario GetById(Guid id)
+        {
+            var trt = _contexto.Funcionarios.Where(c => c.Id == id).First();
+
+            return trt;
+
         }
 
 
