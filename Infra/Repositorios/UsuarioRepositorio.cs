@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,14 +25,32 @@ namespace Infra.Repositorios
 
         public bool ObterUsuarioPeloNome(string login, string password)
         {
-            var test = DbSet.ToList();
+            var senha = EncryptRest(password);
+            var rest = DbSet.Where(x => x.Login == login && x.Password == senha).FirstOrDefault();
+            
 
-            var rest = DbSet.Where(x => x.Login == login && x.Password == password).FirstOrDefault();
-            if (rest == null)
+            if (rest != null)
             {
-                return false;
+                return true;
             }
-            return true;
+            
+            return false;
+        }
+
+        public string EncryptRest(string password)
+        {
+            MD5 md5 = new MD5CryptoServiceProvider();
+            md5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(password));
+            byte[] result = md5.Hash;
+            StringBuilder strBuilder = new StringBuilder();
+            for (int i = 0; i < result.Length; i++)
+            {
+                strBuilder.Append(result[i].ToString("x2"));
+            }
+
+            password = strBuilder.ToString();
+
+            return password;
         }
     }
 }

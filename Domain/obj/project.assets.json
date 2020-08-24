@@ -121,11 +121,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projetos-João Garcia\\Projeto Fenacon\\Fenacon\\Fenacon\\Domain\\Domain.csproj",
+      "projectUniqueName": "D:\\Projetos-João Garcia\\Projeto Fenacon\\Fenacon\\Fenacon\\Fenacon\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "D:\\Projetos-João Garcia\\Projeto Fenacon\\Fenacon\\Fenacon\\Domain\\Domain.csproj",
+      "projectPath": "D:\\Projetos-João Garcia\\Projeto Fenacon\\Fenacon\\Fenacon\\Fenacon\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\jgnet\\.nuget\\packages\\",
-      "outputPath": "D:\\Projetos-João Garcia\\Projeto Fenacon\\Fenacon\\Fenacon\\Domain\\obj\\",
+      "outputPath": "D:\\Projetos-João Garcia\\Projeto Fenacon\\Fenacon\\Fenacon\\Fenacon\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jgnet\\AppData\\Roaming\\NuGet\\NuGet.Config",

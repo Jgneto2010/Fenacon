@@ -17,7 +17,12 @@ namespace FenaconCriation.Controllers
         {
             var result =  repositorio.ObterUsuarioPeloNome(loginModel.Login, loginModel.Senha);
 
-            return Ok();
+            if (result == true)
+            {
+                return Ok("Usuario Logado com Sucesso");
+            }
+
+            return NotFound("Senha ou Login Incorreto");
         }
     }
 }

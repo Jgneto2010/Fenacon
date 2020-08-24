@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yPfiGzyJbIcCaiQidF/tzpQB9/mffImNzt2OgMO9xJ6/sr470HI9TJGzVpT967iIE0wTAxSiErVjYD0rfChlJw==",
+  "dgSpecHash": "m+nO6uw3IfTe1UXDNPbrHMY9eqokmpD4T0bNpwMqTPaPXDJuOeHgsC7CZ3SOAtlKs+Pd1148wsngOSEklsRGhg==",
   "success": true,
-  "projectFilePath": "D:\\Projetos-João Garcia\\Projeto Fenacon\\Fenacon\\Fenacon\\FenaconCriation\\FenaconCriation.csproj",
+  "projectFilePath": "D:\\Projetos-João Garcia\\Projeto Fenacon\\Fenacon\\Fenacon\\Fenacon\\FenaconCriation\\FenaconCriation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jgnet\\.nuget\\packages\\fluentvalidation\\9.0.0\\fluentvalidation.9.0.0.nupkg.sha512",
     "C:\\Users\\jgnet\\.nuget\\packages\\fluentvalidation.aspnetcore\\9.0.0\\fluentvalidation.aspnetcore.9.0.0.nupkg.sha512",
