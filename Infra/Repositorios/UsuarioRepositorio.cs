@@ -21,7 +21,6 @@ namespace Infra.Repositorios
             _contexto = contexto;
             DbSet = _contexto.Set<Usuario>();
         }
-       
 
         public bool ObterUsuarioPeloNome(string login, string password)
         {
