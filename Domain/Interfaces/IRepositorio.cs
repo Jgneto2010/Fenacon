@@ -12,9 +12,9 @@ namespace Domain.Interfaces
         void Add(T obj);
         int SaveChanges();
         List<T> GetAll();
-        List<T> GetAllFunc();
         List<T> GetAllFerias();
         T GetById(Guid id);
+        void Remove(Guid id);
 
     }
    

@@ -142,5 +142,14 @@ namespace FenaconCriation.Controllers
             });
         }
 
+        [HttpDelete]
+        [Route("ExcluirFuncionario")]
+        public async Task<IActionResult> ExcluirFuncionario([FromServices] IFuncionarios repository, Guid id)
+        {
+             repository.Remove(id);
+             repository.SaveChanges();
+            return Ok();
+        }
+
     }
 }

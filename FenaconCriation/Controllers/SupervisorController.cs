@@ -35,7 +35,7 @@ namespace FenaconCriation.Controllers
         [Route("listaSupervisores")]
         public async Task<IActionResult> GetSupervisorLista([FromServices] ISupervisor repositorio)
         {
-            var listaSupervisor = repositorio.GetAllFunc().ToList();
+            var listaSupervisor = repositorio.GetAll().ToList();
 
             var quantidade = listaSupervisor.Count();
 
@@ -50,6 +50,15 @@ namespace FenaconCriation.Controllers
                 quantidasde = quantidade,
                 lista = novaLista
             });
+        }
+
+        [HttpDelete]
+        [Route("ExcluirSupervisor")]
+        public async Task<IActionResult> ExcluirSupervisor([FromServices] ISupervisor repository, Guid id)
+        {
+            repository.Remove(id);
+            repository.SaveChanges();
+            return Ok();
         }
     }
 }

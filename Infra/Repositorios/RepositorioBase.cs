@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -42,7 +43,7 @@ namespace Infra.Repositorios
         }
 
 
-        T IRepositorio<T>.GetById(Guid id)
+        public T GetById(Guid id)
         {
             return DbSet.Where(x => x.Id == id).FirstOrDefault();
         }
@@ -50,6 +51,13 @@ namespace Infra.Repositorios
         public List<T> GetAllFerias()
         {
             return DbSet.ToList();
+        }
+
+        public void Remove(Guid id)
+        {
+            var test = GetById(id);
+            DbSet.Remove(test);
+            
         }
     }
 }

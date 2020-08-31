@@ -3,6 +3,7 @@ using Domain.Interfaces;
 using Domain.Modelos;
 using Domain.Validacoes;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -63,6 +64,15 @@ namespace FenaconCriation.Controllers
                 quantidasde = quantidade,
                 lista = novaLista
             });
+        }
+
+        [HttpDelete]
+        [Route("ExcluirUsuario")]
+        public async Task<IActionResult> ExcluirUsuario([FromServices] IUsuario repository, Guid id)
+        {
+            repository.Remove(id);
+            repository.SaveChanges();
+            return Ok();
         }
 
     }
