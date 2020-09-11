@@ -35,14 +35,5 @@ namespace Infra.Repositorios
                  .ToList();
         }
 
-
-        public Funcionario GetById(Guid id)
-        {
-            var trt = _contexto.Funcionarios.Where(c => c.Id == id).First();
-            return trt;
-
-        }
-
-
     }
 }
