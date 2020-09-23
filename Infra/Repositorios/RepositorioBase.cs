@@ -11,11 +11,11 @@ using System.Threading.Tasks;
 
 namespace Infra.Repositorios
 {
-    public class RepositorioBase<T> : IRepositorio<T>
+    public abstract class RepositorioBase<T> : IRepositorio<T>
         where T : Entity
     {
-        private readonly Contexto _contexto;
-        protected readonly DbSet<T> DbSet;
+        protected Contexto _contexto;
+        protected  DbSet<T> DbSet;
         public RepositorioBase(Contexto contexto)
         {
             _contexto = contexto;
