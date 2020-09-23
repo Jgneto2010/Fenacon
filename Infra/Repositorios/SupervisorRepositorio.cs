@@ -11,16 +11,10 @@ namespace Infra.Repositorios
 {
     public class SupervisorRepositorio : RepositorioBase<Supervisor>, ISupervisor
     {
-        private readonly Contexto _contexto;
-        protected readonly DbSet<Supervisor> DbSet;
-        public SupervisorRepositorio(Contexto contexto) : base(contexto)
-        {
-            _contexto = contexto;
-            DbSet = _contexto.Set<Supervisor>();
-        }
+        public SupervisorRepositorio(Contexto contexto) : base(contexto){}
         public List<Supervisor> GetAllFunc()
         {
-            return DbSet.AsNoTracking().Include(x => x.Funcionarios).ToList();
+            return DbSet.Include(x => x.Funcionarios).ToList();
         }
     }
 }

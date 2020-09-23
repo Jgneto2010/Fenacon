@@ -14,25 +14,15 @@ namespace Infra.Repositorios
 {
     public class UsuarioRepositorio : RepositorioBase<Usuario>, IUsuario
     {
-        private readonly Contexto _contexto;
-        protected readonly DbSet<Usuario> DbSet;
-        public UsuarioRepositorio(Contexto contexto) : base(contexto)
-        {
-            _contexto = contexto;
-            DbSet = _contexto.Set<Usuario>();
-        }
-
+        public UsuarioRepositorio(Contexto contexto) : base(contexto){}
         public bool ObterUsuarioPeloNome(string login, string password)
         {
             var senha = EncryptRest(password);
             var rest = DbSet.Where(x => x.Login == login && x.Password == senha).FirstOrDefault();
-            
-
             if (rest != null)
             {
                 return true;
             }
-            
             return false;
         }
 
